@@ -3,3 +3,6 @@ what is the use in thise context  *hradr css
 -transition: all 0.5s;
 -transition-timing-function: ease-in;
 todounload icon images go to the umi.com webisit =>serach=>type =>icons
+
+*to get the movie data from tmdatabase  search
+
