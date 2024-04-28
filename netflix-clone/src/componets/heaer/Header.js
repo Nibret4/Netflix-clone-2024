@@ -1,7 +1,8 @@
 import React from "react";
-import Netflixlogo from "../../assets/imges/Netflix-Logo.jpeg"
+import Netflixlogo from "../../assets/imges/netFlix.png"
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import AddCircleSharpIcon from "@mui/icons-material/AddCircleSharp";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./headr.css";
@@ -11,10 +12,10 @@ const Header = () => {
       <div className="header_container">
         <div className="header_left">
           <ul>
-            <li>
+            <li className="img_log">
               <img src={Netflixlogo} alt="Netflix logo" width="100"></img>
             </li>
-          
+
             <li>Home</li>
             <li>TvShows</li>
             <li>Movies</li>
@@ -26,6 +27,10 @@ const Header = () => {
         <div className="header-right">
           <ul>
             <li>
+              <AddCircleSharpIcon />
+            </li>
+
+            <li>
               <SearchIcon />
             </li>
             <li>
@@ -36,6 +41,9 @@ const Header = () => {
             </li>
             <li>
               <ArrowDropDownIcon />
+            </li>
+            <li className="dropdown">
+              <p>sign out of Netflix</p>
             </li>
           </ul>
         </div>

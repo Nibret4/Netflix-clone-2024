@@ -3,7 +3,7 @@
 
 
 const APi_Key = process.env.REACT_APP_APi_Key;
-const Requests = {
+const requests = {
     
 }
 
@@ -11,4 +11,4 @@ const Requests = {
 
 
 
-export default Requests
+export default requests

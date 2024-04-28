@@ -12,8 +12,8 @@
   transition: all 0.5s;
   transition-timing-function: ease-in;
   z-index: 1;
-  
 }
+
 .nav_black {
   background-color: rgb(20, 20, 20);
 }
@@ -23,7 +23,9 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.header_container ul li:hover {
+  opacity: 0.8;
+}
 .header_left ul {
   width: 140%;
   display: flex;
@@ -38,7 +40,28 @@
   width: 140%;
   display: flex;
   align-items: center;
-
+  position: relative;
   list-style: none;
   justify-content: space-between;
+}
+.header-right .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 18px 22px;
+  border-radius: 2px;
+  text-decoration: underline;
+  z-index: 1;
+  display: none;
+  color: red;
+}
+
+.header-right .dropdown p {
+  font-size: 13px;
+  cursor: pointer;
+}
+.header-right:hover .dropdown {
+  display: block;
 }
