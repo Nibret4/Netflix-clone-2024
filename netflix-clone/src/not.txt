@@ -7,3 +7,5 @@ to download icon images go to the umi.com webisit =>serach=>type =>icons
 *to get the movie data from tmdatabase  search
 
 &&=the same as if
+
+API_Key=c7aaf57858b282590b1e45670fb90886

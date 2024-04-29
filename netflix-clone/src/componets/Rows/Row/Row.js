@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./row.css";
-import movieTrailer from 'movie-trailer';
-import youTube from 'react-youtube'
-import axios from "../../../utlis/Axios";
+import movieTrailer from "movie-trailer";
+import youTube from "react-youtube";
+import axios from "../../../utlis/axios";
 const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovie] = useState([]);
 
-  // const[trailerUrl,settrailerUrl]=useState("")
+  const[trailerUrl,settrailerUrl]=useState("")
 
   const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -23,39 +23,35 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     })();
   }, [fetchUrl]);
 
+    const handleClick = (movie) => {
+      if (trailerUrl) {settrailerUrl('')
 
-//   const handleClick = (movie) => {
-//     if (trailerUrl) {settrailerUrl('')
-    
-//     } else {
-//       movieTrailer(movie?.title || movie?.name || movie?.original_name).then((url) => {
-//         console.log(url)
-//         const urlparams = new URLSearchParams(new URL(url).search)
-//         console.log(urlparams)
-//         console.log(urlparams.get('v'))
-//        settrailerUr(urlparams.get('v'))
-//     })
-      
-//   }
-// }
+      } else {
+        movieTrailer(movie?.title || movie?.name || movie?.original_name).then((url) => {
+          console.log(url)
+          const urlparams = new URLSearchParams(new URL(url).search)
+          console.log(urlparams)
+          console.log(urlparams.get('v'))
+         settrailerUrl(urlparams.get("v"));
+      })
 
+    }
+  }
 
-
-
-  // const opts = {
-  //   height: "390",
-  //   width: "100%",
-  //   playerVars: {
-  //     autoplay: 1,
-  //   },
-  // };
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
   return (
     <div className="row">
       <h1>{title}</h1>
       <div className="row_posters">
         {movies?.map((movie, i) => (
           <img
-            //onclick={()=>handleClick(movie)}
+            onclick={()=>handleClick(movie)}
             key={i}
             src={`${base_url}${
               isLargeRow ? movie.poster_path : movie.backdrop_path
@@ -65,13 +61,12 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
           />
         ))}
       </div>
-      {/* <div
+      <div
         style={{
           padding: "40px",
         }}>
         {trailerUrl && <youTube videoId={trailerUrl} opts={opts} />}
-      </div> */}
- 
+      </div>
     </div>
   );
 };

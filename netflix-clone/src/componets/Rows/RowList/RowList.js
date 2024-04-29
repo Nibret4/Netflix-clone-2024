@@ -1,7 +1,7 @@
 import React from "react";
 import "./rowList.css";
 import Row from "../Row/Row";
-import requests from "../../../utlis/Requests";
+import requests from "../../../utlis/requests";
 const RowList = () => {
   return (
     <>
@@ -9,7 +9,8 @@ const RowList = () => {
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow={true}
-      />
+          />
+          
     </>
   );
 };

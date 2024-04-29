@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from "react";
-import axios from "../../utlis/Axios";
-import requests from "../../utlis/Requests";
+import axios from "../../utlis/axios";
+import requests from "../../utlis/requests";
 import "./banner.css";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+
 const Banner = () => {
   const [movie, setmovie] = useState({});
-  // useEffect(() => {
-  //     (async () => {
-  //         try {
-  //             const request = await axios.get(requests.fetchNetflixoriginals)
-  //             // console.log(requests)
-  //             setmovie(request.data.requests[Math.floor(Math.random() * request.data.requests.length)]);
-  //         } catch (err) {
-  //             console.log('err', err)
-  //         }
-  //     })
-  // }, []);
+  useEffect(() => {
+      (async () => {
+          try {
+              const request = await axios.get(requests.fetchNetflixOriginals)
+              console.log(requests)
+              setmovie(request.data.results[Math.floor(Math.random() * request.data.results.length)]);
+          } catch (err) {
+              console.log('err', err)
+          }
+      })()
+  }, []);
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
-
+console.log(movie)
   return (
     <div
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url---`,
+        backgroundImage: `url('https://image.tmdb.org/t/p/original${movie?.backdrop_path}')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}>

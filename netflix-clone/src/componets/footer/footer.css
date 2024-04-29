@@ -29,6 +29,12 @@ justify-content: space-between;
 }
 .footer_data ul li{
     cursor: pointer;
+
+}
+.footer_data ul li:hover{
+    opacity: 1;
+    color: #fff;
+    text-decoration: underline;
 }
 .service_code{
     display: flex;
@@ -37,7 +43,7 @@ justify-content: space-between;
     width: 10px;
     margin: 10px 0;
     cursor: pointer;
- height: 45px;
+ 
 }
 .copy-write{
     font-size: 12px;
