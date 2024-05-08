@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "../../utlis/axios";
 import requests from "../../utlis/requests";
 import "./banner.css";
+import info_icon from "../../assets/imges/info_icon.png";
+import play_icon from "../../assets/imges/play_icon.png";
 
 const Banner = () => {
   const [movie, setmovie] = useState({});
@@ -34,8 +36,14 @@ console.log(movie)
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner_button">
-          <button className="banner_button play">Play</button>
-          <button className="banner_button">My List</button>
+          <button className="banner_btn play">
+            <img src={play_icon} alt="play_icon" />
+            Play
+          </button>
+          <button className="banner_btn">
+            <img src={info_icon} alt="" />
+            More Info
+          </button>
         </div>
         <h1 className="banner_discription">{truncate(movie?.overview, 150)}</h1>
       </div>
