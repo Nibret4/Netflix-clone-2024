@@ -1,7 +1,7 @@
 import React from "react";
 import "./rowList.css";
 import Row from "../Row/Row";
-import requests from "../../../utlis/requests";
+import requests from "../../../utlis/Requests";
 const RowList = () => {
   return (
     <>

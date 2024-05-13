@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "../../utlis/axios";
-import requests from "../../utlis/requests";
+import axios from "../../utlis/Axios";
+import requests from "../../utlis/Requests";
 import "./banner.css";
 import info_icon from "../../assets/imges/info_icon.png";
 import play_icon from "../../assets/imges/play_icon.png";
