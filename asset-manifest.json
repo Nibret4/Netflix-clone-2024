@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Netflix-clone-2024/static/css/main.2a32129a.css",
+    "main.js": "/Netflix-clone-2024/static/js/main.972ffef9.js",
+    "static/media/marco-polo-season-2-folder-icons-netflix-2014-logo-svg-png-clipart.jpeg": "/Netflix-clone-2024/static/media/marco-polo-season-2-folder-icons-netflix-2014-logo-svg-png-clipart.48645890b2a952ee9912.jpeg",
+    "index.html": "/Netflix-clone-2024/index.html",
+    "main.2a32129a.css.map": "/Netflix-clone-2024/static/css/main.2a32129a.css.map",
+    "main.972ffef9.js.map": "/Netflix-clone-2024/static/js/main.972ffef9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a32129a.css",
+    "static/js/main.972ffef9.js"
+  ]
+}
