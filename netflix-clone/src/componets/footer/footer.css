@@ -52,9 +52,10 @@
   text-decoration: none;
   display: grid;
     grid-template-columns: auto  auto auto auto;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 30px;
     list-style: none;
+    padding-top: 16px;
 }
 
 .footer_data ul li {
